@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A1 Healthcare Management Inc — Clinical software</title>
+<meta name="description" content="A1 Healthcare Management Inc builds clinical decision-support software for healthcare professionals. Maker of CliniTwin.">
+<style>
+  :root {
+    --navy-900: #0a1f33;
+    --navy-800: #0e2b45;
+    --navy-700: #14395b;
+    --teal: #2ec9bd;
+    --teal-dark: #1a9f95;
+    --ink: #16202b;
+    --muted: #5b6b7c;
+    --line: #dfe6ed;
+    --paper: #ffffff;
+    --wash: #f4f7fa;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ---------- header ---------- */
+  header {
+    background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-700) 100%);
+    color: #fff;
+    padding: 1.1rem 0;
+    border-bottom: 3px solid var(--teal);
+  }
+  .brandbar { display: flex; align-items: center; gap: .85rem; flex-wrap: wrap; }
+  .mark { flex: 0 0 auto; }
+  .brandname { font-size: 1.05rem; font-weight: 700; letter-spacing: .01em; }
+  .brandsub { font-size: .78rem; color: #9fc4d6; margin-top: -2px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    background: linear-gradient(160deg, var(--navy-800) 0%, var(--navy-900) 100%);
+    color: #fff;
+    padding: 4.5rem 0 4rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    max-width: 22ch;
+  }
+  .hero p {
+    font-size: clamp(1rem, 1.7vw, 1.2rem);
+    color: #c4d7e4;
+    max-width: 56ch;
+    margin: 0;
+  }
+  .hero .accent { color: var(--teal); }
+
+  /* ---------- sections ---------- */
+  section { padding: 3.75rem 0; }
+  section.alt { background: var(--wash); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-size: 1.45rem;
+    margin: 0 0 1.1rem;
+    letter-spacing: -.01em;
+  }
+  h3 { font-size: 1.05rem; margin: 0 0 .4rem; }
+  p { margin: 0 0 1rem; }
+  .lead { font-size: 1.05rem; max-width: 62ch; }
+  .muted { color: var(--muted); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.4rem;
+  }
+  .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+  /* ---------- product ---------- */
+  .product {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 760px) { .product { grid-template-columns: 1fr; gap: 2rem; } }
+
+  ul.ticks { list-style: none; padding: 0; margin: 1.25rem 0 0; }
+  ul.ticks li {
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: .55rem;
+    color: var(--muted);
+    font-size: .95rem;
+  }
+  ul.ticks li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: .55em;
+    width: .55rem; height: .55rem;
+    border-radius: 50%;
+    background: var(--teal);
+  }
+
+  .notice {
+    background: #fff8e6;
+    border-left: 4px solid #e0a800;
+    padding: 1rem 1.15rem;
+    border-radius: 0 6px 6px 0;
+    font-size: .92rem;
+    margin-top: 1.75rem;
+  }
+
+  /* ---------- contact ---------- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .contact-grid dt {
+    font-size: .74rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+    margin-bottom: .3rem;
+  }
+  .contact-grid dd { margin: 0 0 1.25rem; font-size: 1rem; }
+  a { color: var(--teal-dark); }
+  a:hover { color: var(--navy-700); }
+
+  .email-big {
+    font-size: 1.15rem;
+    font-weight: 600;
+    word-break: break-all;
+  }
+
+  /* ---------- footer ---------- */
+  footer {
+    background: var(--navy-900);
+    color: #8fb0c4;
+    padding: 2.25rem 0;
+    font-size: .86rem;
+  }
+  footer a { color: #b9d7e6; }
+  footer .row { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap brandbar">
+    <svg class="mark" width="34" height="34" viewBox="0 0 512 512" aria-hidden="true">
+      <rect width="512" height="512" rx="96" fill="#0a1f33"/>
+      <path d="M40 268 H150 L188 214 L226 268 H272" fill="none" stroke="#2ec9bd" stroke-width="20"
+            stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+      <path d="M40 252 H150 L188 198 L226 252 L256 130 L286 360 L316 252 H472"
+            fill="none" stroke="#2ec9bd" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div>
+      <div class="brandname">A1 Healthcare Management Inc</div>
+      <div class="brandsub">Clinical software</div>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Clinical decision support that works <span class="accent">without a network</span>.</h1>
+    <p>A1 Healthcare Management Inc builds software for clinicians working where connectivity cannot be assumed.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p class="lead">
+      We build clinical software. Our focus is decision support that runs entirely on the device, so that the quality
+      of reasoning available at a bedside does not depend on the bandwidth in the building.
+    </p>
+    <p class="lead muted">
+      A1 Healthcare Management Inc is a corporation registered in the United States. Our products are developed
+      against published clinical criteria, implemented as tested code rather than generated output, and distributed
+      through mobile application stores.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Published criteria</h3>
+        <p>Scores and thresholds implemented from the source literature, with unit tests encoding the published boundary conditions.</p>
+      </div>
+      <div class="card">
+        <h3>On-device computation</h3>
+        <p>Clinical calculation runs locally. No clinical data is transmitted, and the software functions with no connectivity.</p>
+      </div>
+      <div class="card">
+        <h3>Stated limits</h3>
+        <p>Where our software shows a model rather than a measurement, it says so on screen. We do not present generated figures as findings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="product">
+      <div>
+        <h2>CliniTwin</h2>
+        <p class="lead">
+          A clinical decision-support application for trained healthcare professionals. From bedside observations —
+          vital signs, symptoms, level of consciousness — CliniTwin computes three published early warning scores and
+          returns a structured clinical picture in seconds, entirely on the device.
+        </p>
+        <ul class="ticks">
+          <li><strong>MEWS</strong> — Modified Early Warning Score (Subbe et al., QJM 2001)</li>
+          <li><strong>qSOFA</strong> — quick Sequential Organ Failure Assessment (Sepsis-3, JAMA 2016)</li>
+          <li><strong>NEWS2</strong> — National Early Warning Score 2 (Royal College of Physicians, 2017), including the single-parameter escalation rule</li>
+          <li>Ranked differential diagnoses with supporting <em>and</em> opposing findings</li>
+          <li>Red flags, immediate actions, and a medication order set with contraindication warnings</li>
+        </ul>
+
+        <div class="notice">
+          <strong>CliniTwin is a prototype.</strong> It is not a medical device, has not been clinically validated, and
+          must not be used to diagnose, treat, or make care decisions for real patients. All demonstration cases use
+          simulated data.
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>Platform</h3>
+          <p style="margin-bottom:1rem;">Android · Kotlin · Jetpack Compose</p>
+          <h3>Availability</h3>
+          <p style="margin-bottom:1rem;">In preparation for release on the Samsung Galaxy Store.</p>
+          <h3>Privacy</h3>
+          <p><a href="https://rajapurisingh8.github.io/clinitwin-privacy/">CliniTwin privacy policy</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="lead muted">For product, partnership or compliance enquiries.</p>
+
+    <dl class="contact-grid">
+      <div>
+        <dt>Email</dt>
+        <dd class="email-big"><a href="mailto:support@a1healthcaremgmt.net">support@a1healthcaremgmt.net</a></dd>
+      </div>
+      <div>
+        <dt>Telephone</dt>
+        <dd><a href="tel:+13475660090">+1 347-566-0090</a></dd>
+      </div>
+      <div>
+        <dt>Registered address</dt>
+        <dd>6128 69th Pl PH<br>Middle Village, New York 11379<br>United States</dd>
+      </div>
+      <div>
+        <dt>D-U-N-S Number</dt>
+        <dd>010718899</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>&copy; 2026 A1 Healthcare Management Inc. All rights reserved.</div>
+    <div>
+      <a href="mailto:support@a1healthcaremgmt.net">support@a1healthcaremgmt.net</a>
+      &nbsp;·&nbsp;
+      <a href="https://rajapurisingh8.github.io/clinitwin-privacy/">Privacy policy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
